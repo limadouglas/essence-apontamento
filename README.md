@@ -9,5 +9,5 @@ Extensão google chrome - apontamento de horas automático
 5. clique na extensão e defina os valores para o preenchimento automatico.
 6. clique em preencher.
 
-#Exemplo
+# Exemplo
 <img src="https://raw.githubusercontent.com/limadouglas/essence-apontamento/master/images/example.png">
