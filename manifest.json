@@ -1,0 +1,35 @@
+{
+  "name": "Essence - apontamento rápido",
+  "manifest_version": 2,
+  "description": "Cansado de apontar horas na essence? resolvi criar algo para economizar o seu tempo, espero que ajude!",
+  "version":"1.0",
+  "page_action": {
+    "default_icon": {
+      "16": "images/cc16.png",
+      "32": "images/cc32.png"
+      },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/cc16.png",
+    "48": "images/cc48.png",
+    "32": "images/cc32.png",
+    "128": "images/cc128.png"
+  },
+  "permissions": [
+    "http://extranet.essenceit.com/administracao/*",
+    "storage",
+    "declarativeContent"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts":[
+    {
+      "matches": ["http://extranet.essenceit.com/administracao/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
