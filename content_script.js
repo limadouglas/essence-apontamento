@@ -14,22 +14,22 @@ chrome.runtime.onMessage.addListener(
 function updateHour(hours, isOnlyEmpty){
   document.querySelectorAll('.hora').forEach(function(hour){
 
-    if(hour.parentNode.style.backgroundColor !== 'rgb(192, 192, 192)'){
+    if(hour.parentNode.style.backgroundColor !== 'lightgrey'){
       const nameHourSplit = hour.getAttribute('id').split('_');
       const typeHour = nameHourSplit[nameHourSplit.length-1]
       
       if(!isOnlyEmpty || !hour.value.trim()){
         switch(typeHour){
-          case 'txtEntrada1': 
+          case 'txtE1': 
             hour.value = hours.entryHour1;
             break;
-          case 'txtSaida1': 
+          case 'txtS1': 
             hour.value = hours.exitHour1;
             break;
-          case 'txtEntrada2': 
+          case 'txtE2': 
             hour.value = hours.entryHour2;
             break;
-          case 'txtSaida2': 
+          case 'txtS2': 
             hour.value = hours.exitHour2;
             break;
           default: break;
